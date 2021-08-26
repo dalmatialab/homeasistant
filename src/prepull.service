@@ -1,0 +1,10 @@
+[Unit]
+Description=Pre-pull existing homeasistant plugin images
+After=docker.service entrypoint.service
+
+[Service]
+ExecStart=python3 /usr/sbin/prepull.py
+ExecStartPost= systemctl disable prepull.service
+
+[Install]
+WantedBy=multi-user.target

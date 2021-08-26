@@ -1,0 +1,12 @@
+[Unit]
+Description=Home Hassio service
+After=docker.service
+
+[Service]
+ExecStartPre=-/bin/bash -c '/usr/bin/rm -r /var/lib/docker/* '
+ExecStart=/usr/sbin/installer.sh
+ExecStartPost= systemctl disable entrypoint.service
+Type= oneshot
+
+[Install]
+WantedBy=multi-user.target
