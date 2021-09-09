@@ -2,8 +2,8 @@
 
 # Supported tags and respective Dockerfile links
 
- - 1.0-rc-1
- - 1.0-rc-2
+ - [1.0-rc-1](https://github.com/dalmatialab/homeassistant/blob/7821d14524fea0b6a6fd7e4228d2ee39510d65b1/Dockerfile)
+ - [1.0-rc-2](https://github.com/dalmatialab/homeassistant/blob/42049d50d6a58e9e0982e507e6619330966a5413/Dockerfile)
 
 # What is HomeAssistant ? 
 
