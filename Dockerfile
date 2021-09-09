@@ -1,6 +1,11 @@
 FROM jrei/systemd-ubuntu:20.04
 LABEL maintainer="dalmatialab"
 
+# Install tzdata and set right timezone
+ENV DEBIAN_FRONTEND="noninteractive"
+RUN apt update && apt-get -y install tzdata
+ENV TZ=Europe/Zagreb
+
 # Install tools
 RUN apt update && apt install apt-transport-https ca-certificates curl software-properties-common network-manager apparmor wget jq vim -y 
 
